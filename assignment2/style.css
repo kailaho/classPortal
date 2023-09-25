@@ -1,0 +1,24 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+form{
+    margin-left: 1.5em;
+}
+
+#submitButton{
+    margin: 2em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: .5em;
+    border-radius: .5em;
+    background-color: white;
+}
+
+#submitButton:hover {
+    font-weight: bold;
+}
+
+#afterSubmit{
+    margin-left: 1.5em;
+}
