@@ -1,0 +1,64 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+}
+
+#gnome{
+    justify-content: center;
+    text-align: center;
+    padding-left: 10em;
+    padding-top: 8em;
+}
+
+#intro-gnome{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238, 238, 142);
+    height: 100vh;
+    padding: 1em;
+}
+
+#paletteTemplate{
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+}
+
+#swatch1{
+    width: 5em;
+    height: 8em;
+    background-color: black;
+}
+
+#swatch2{
+    width: 5em;
+    height: 8em;
+    background-color: rgb(147, 39, 39);
+}
+
+#swatch3{
+    width: 5em;
+    height: 8em;
+    background-color: rgb(40, 30, 114);
+}
+
+#swatch4{
+    width: 5em;
+    height: 8em;
+    background-color: rgb(12, 170, 96);
+}
+
+#swatch5{
+    width: 5em;
+    height: 8em;
+    background-color: rgb(215, 38, 189);
+}
+
+
+
