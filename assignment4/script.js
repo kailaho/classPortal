@@ -26,7 +26,7 @@ let generatedColorPalette = [];
     http.onreadystatechange = function() {
 
         if(http.readyState == 4 && http.status == 200) {
-            
+            button.value="Generate Color Palette";
             console.log(hat, shirt, mittens, shoes, pompom);
 
             var palette = JSON.parse(http.responseText).result;
@@ -112,7 +112,6 @@ let generatedColorPalette = [];
     http.open("POST", url, true);
     http.send(JSON.stringify(data));
     
-    button.value = "Generate Color Palette";
     });
 
 

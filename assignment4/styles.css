@@ -22,6 +22,7 @@ body{
     background-color: rgb(238, 238, 142);
     height: 100vh;
     padding: 1em;
+    border-radius: 2em;
 }
 
 #paletteTemplate{
@@ -60,5 +61,11 @@ body{
     background-color: rgb(215, 38, 189);
 }
 
-
+#clickHere{
+    background-color: white;
+    border-radius: 1em;
+    padding: 1em;
+    border: 0px;
+    font-weight: bold;
+}
 
