@@ -20,7 +20,8 @@ body{
     display: flex;
     flex-direction: column;
     background-color: rgb(238, 238, 142);
-    height: 100vh;
+    width: 45%;
+    height: auto;
     padding: 1em;
     border-radius: 2em;
 }
@@ -28,43 +29,57 @@ body{
 #paletteTemplate{
     padding: 1em;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+}
+
+.buttonPalette{
+    display: flex;
+    flex: row;
+    padding: 1em;
+    justify-content: space-around;
 }
 
 #swatch1{
     width: 5em;
-    height: 8em;
+    height: 5em;
     background-color: black;
+    border-radius: 1em;
 }
 
 #swatch2{
     width: 5em;
-    height: 8em;
-    background-color: rgb(147, 39, 39);
+    height: 5em;
+    background-color: black;
+    border-radius: 1em;
 }
 
 #swatch3{
     width: 5em;
-    height: 8em;
-    background-color: rgb(40, 30, 114);
+    height: 5em;
+    background-color: black;
+    border-radius: 1em;
 }
 
 #swatch4{
     width: 5em;
-    height: 8em;
-    background-color: rgb(12, 170, 96);
+    height: 5em;
+    background-color: black;
+    border-radius: 1em;
 }
 
 #swatch5{
     width: 5em;
-    height: 8em;
-    background-color: rgb(215, 38, 189);
+    height: 5em;
+    background-color: black;
+    border-radius: 1em;
 }
 
-#clickHere{
+.clickHere{
     background-color: white;
     border-radius: 1em;
-    padding: 1em;
+    padding: .5em;
+    margin-top: 1.5em;
+    height: 50%;
     border: 0px;
     font-weight: bold;
 }
