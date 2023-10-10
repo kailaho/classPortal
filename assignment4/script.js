@@ -23,8 +23,6 @@ function changeColor(swatchId, item){
     //console.log(data);
     //console.log(data.rgb);
 
-    data.rgb = [156,56,20];
-
     document.getElementById(`${swatchId}`).style.backgroundColor = `rgb(${data.rgb})`;
     
     for(let i = 0; i < dataImg.length; i += 4){
