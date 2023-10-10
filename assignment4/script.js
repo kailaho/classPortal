@@ -16,12 +16,13 @@ const imageData = context.getImageData(0,0,canvas.width, canvas.height);
 const dataImg = imageData.data;
 
 function changeColor(swatchId, item){
-    fetch("https://onesimpleapi.com/api/color?token=FfBa6nZASAaMErZUaw2L8rHFWMtUhx2xFMMdNq61&output=json&&text=Jane")
+    let random = Math.random() * (360) + 0;
+    fetch(`https://onesimpleapi.com/api/color?token=FfBa6nZASAaMErZUaw2L8rHFWMtUhx2xFMMdNq61&output=json&hue=${random}&&text=Jane`)
     .then (response => {return response.json()})
     .then((data) => {
     
-    //console.log(data);
-    //console.log(data.rgb);
+    console.log(data);
+    console.log(data.rgb);
 
     document.getElementById(`${swatchId}`).style.backgroundColor = `rgb(${data.rgb})`;
     
@@ -37,9 +38,10 @@ function changeColor(swatchId, item){
     context.putImageData(imageData, 0, 0);
     gnome.src = canvas.toDataURL();
     console.log(data.rgb[0]);
+    updateItem = data.rgb[0];
     });
     
-};
+}
 
 
 
@@ -50,7 +52,9 @@ clicked = true;
 hatButton.value ="Generating...";
 
 console.log(clicked);
+console.log(updateItem);
 changeColor("swatch1", hat);
+console.log(updateItem);
 
 //moL051sQMnHOeOfyJM4JpZBqoL9FMiscnsKitRQR
 });
