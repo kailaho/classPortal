@@ -13,32 +13,40 @@ canvas.width = gnome.width;
 canvas.height = gnome.height;
 context.drawImage(gnome, 0, 0, canvas.width, canvas.height);
 const imageData = context.getImageData(0,0,canvas.width, canvas.height);
-const dataImg = imageData.data;
+let dataImg = imageData.data;
 
 function changeColor(swatchId, item){
-    let random = Math.random() * (360) + 0;
-    fetch(`https://onesimpleapi.com/api/color?token=FfBa6nZASAaMErZUaw2L8rHFWMtUhx2xFMMdNq61&output=json&hue=${random}&&text=Jane`)
+    fetch("https://x-colors.yurace.pro/api/random")
     .then (response => {return response.json()})
     .then((data) => {
     
-    console.log(data);
-    console.log(data.rgb);
+        console.log(data);
 
-    document.getElementById(`${swatchId}`).style.backgroundColor = `rgb(${data.rgb})`;
+    document.getElementById(`${swatchId}`).style.backgroundColor = data.hex;
+
+    let rgbVals = [];
+    let match = (data.rgb).match(/\((\d+), (\d+), (\d+)\)/);
+    if(match){
+        console.log("matched");
+        rgbVals = [,r,g,b] = match.map(Number);
+    }
+
+    console.log(rgbVals);
     
     for(let i = 0; i < dataImg.length; i += 4){
-        if(dataImg[i] === item){
-            dataImg[i] = data.rgb[0];
-            dataImg[i + 1] = data.rgb[1];
-            dataImg[i + 2] = data.rgb[2];
+        //console.log("item in for loop: " + item);
+        if(dataImg[i] == item){
+            dataImg[i] = rgbVals[1];
+            dataImg[i+1] = rgbVals[2];
+            dataImg[i+2] = rgbVals[3];
         }
     }
 
     
     context.putImageData(imageData, 0, 0);
     gnome.src = canvas.toDataURL();
-    console.log(data.rgb[0]);
-    updateItem = data.rgb[0];
+    item = rgbVals[1];
+    console.log(item);
     });
     
 }
@@ -51,12 +59,9 @@ clicked = true;
 
 hatButton.value ="Generating...";
 
-console.log(clicked);
-console.log(updateItem);
 changeColor("swatch1", hat);
-console.log(updateItem);
+hatButton.value ="Generate Hat Color";
 
-//moL051sQMnHOeOfyJM4JpZBqoL9FMiscnsKitRQR
 });
 
 let shirtButton = document.getElementById("shirtButton");
