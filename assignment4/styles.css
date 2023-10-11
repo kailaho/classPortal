@@ -1,0 +1,86 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+}
+
+#gnome{
+    justify-content: center;
+    text-align: center;
+    padding-left: 10em;
+    padding-top: 8em;
+}
+
+#intro-gnome{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(238, 238, 142);
+    width: 45%;
+    height: auto;
+    padding: 1em;
+    border-radius: 2em;
+}
+
+#paletteTemplate{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttonPalette{
+    display: flex;
+    flex: row;
+    padding: 1em;
+    justify-content: space-around;
+}
+
+#swatch1{
+    width: 5em;
+    height: 5em;
+    background-color: black;
+    border-radius: 1em;
+}
+
+#swatch2{
+    width: 5em;
+    height: 5em;
+    background-color: black;
+    border-radius: 1em;
+}
+
+#swatch3{
+    width: 5em;
+    height: 5em;
+    background-color: black;
+    border-radius: 1em;
+}
+
+#swatch4{
+    width: 5em;
+    height: 5em;
+    background-color: black;
+    border-radius: 1em;
+}
+
+#swatch5{
+    width: 5em;
+    height: 5em;
+    background-color: black;
+    border-radius: 1em;
+}
+
+.clickHere{
+    background-color: white;
+    border-radius: 1em;
+    padding: .5em;
+    margin-top: 1.5em;
+    height: 50%;
+    border: 0px;
+    font-weight: bold;
+}
+
