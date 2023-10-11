@@ -15,6 +15,15 @@ context.drawImage(gnome, 0, 0, canvas.width, canvas.height);
 const imageData = context.getImageData(0,0,canvas.width, canvas.height);
 let dataImg = imageData.data;
 
+
+
+let reset = document.getElementById("resetButton");
+reset.addEventListener("click", ()=> {
+    console.log("refreshed");
+    location.reload();
+    
+});
+
 function changeColor(swatchId, item){
     fetch("https://x-colors.yurace.pro/api/random")
     .then (response => {return response.json()})
@@ -60,7 +69,6 @@ clicked = true;
 hatButton.value ="Generating...";
 
 changeColor("swatch1", hat);
-hatButton.value ="Generate Hat Color";
 
 });
 
@@ -88,5 +96,4 @@ pompomButton.addEventListener("click", () =>{
 pompomButton.value = "Generating...";
 changeColor("swatch5", pompom);
 });
-
 
