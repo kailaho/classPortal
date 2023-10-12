@@ -1,0 +1,41 @@
+#wrapper{
+    display: grid;
+    /*I learned the following property from: https://stackoverflow.com/questions/37502266/how-do-i-create-a-3x3-grid-via-css */
+    grid-template-columns: repeat(5, 2fr);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.Acell{
+    padding: 3em;
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    background-color: rgb(108, 210, 154);
+}
+
+.Bcell{
+    padding: 3em;
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    background-color: rgb(39, 116, 116);
+}
+
+#button{
+    background-color: white;
+    border-radius: 1em;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+#hover{
+    padding: 3em;
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    background-color: rgb(39, 116, 116);
+}
