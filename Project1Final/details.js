@@ -1,6 +1,6 @@
 // Load 3D Scene
 import * as THREE from '../Project1Final/node_modules/three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { GLTFLoader } from '../Project1Final/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 
 console.log("line 6 in details.js");
