@@ -67,10 +67,27 @@ loadItem('./models/pineTree/scene.gltf', .7, .7, .7, 8, -3, 0, 0,0,0);
 loadItem('./models/aspen/scene.gltf', .5, .5, .5, -22, -8, 0, 0, 185, 0);
 loadItem('./models/mountains/scene.gltf', 125, 125, 125, 0, -20, -200, 0, 180, 0);
 
+
+let raycaster = new THREE.Raycaster();
+let mouse = new THREE.Vector2();
+
+document.addEventListener('mousemove', onMouseMove, false);
+
+function onMouseMove(event){
+   mouse.x = (event.clientX / window.innerWidth) * 2 - 1 ;
+   mouse.y = (event.clientY / window.innerHeight) * 2 + 1;
+}
+
+console.log("scene children: " + scene.children);
+
 function animate() {
    //console.log("in animate");
    render();
    requestAnimationFrame( animate );
+   let intersects = raycaster.intersectObjects(scene.children);
+   if (intersects.length > 0){
+      //console.log("hovering!");
+   }
    }
 
 function render() {
