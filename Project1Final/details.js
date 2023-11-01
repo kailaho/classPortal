@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 
+console.log("line 6 in details.js");
 
 document.addEventListener("DOMContentLoaded", function(){
    console.log("content loaded")
@@ -105,10 +106,10 @@ scene.add( directionalLight );
    
 }
 
-loadItem('.//models/pineTree/scene.gltf', .6, .6, .6, -1, -3, 0, 0,0,0, "model1", 0xFFFFFF);
-loadItem('.//models/aspen/scene.gltf', .4, .4, .4, 0, -5, 0, 0, 180, 0, "model2", 0xFFFFFF);
-loadItem('.//models/columbine.gltf', 20, 20, 20, 0, -10, 0, 0, 0, 0, "model3", 0xFFFFFF);
-loadItem('./models/grass/scene.gltf', 5,5,5,0,-5,0, 0, 0, 0, "model4", 0xFFFFFF);
+loadItem('./public/models/pineTree/scene.gltf', .6, .6, .6, -1, -3, 0, 0,0,0, "model1", 0xFFFFFF);
+loadItem('./public/models/aspen/scene.gltf', .4, .4, .4, 0, -5, 0, 0, 180, 0, "model2", 0xFFFFFF);
+loadItem('./public/models/columbine.gltf', 20, 20, 20, 0, -10, 0, 0, 0, 0, "model3", 0xFFFFFF);
+loadItem('./public/models/grass/scene.gltf', 5,5,5,0,-5,0, 0, 0, 0, "model4", 0xFFFFFF);
 
 
 
