@@ -1,5 +1,5 @@
 // Load 3D Scene
-import * as THREE from 'three';
+import * as THREE from './node_modules/three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 
@@ -12,9 +12,12 @@ document.addEventListener("DOMContentLoaded", function(){
    let map2 = document.getElementById("map2");
    let where3 = document.getElementById("where3");
    let map3 = document.getElementById("map3");
+   let where4 = document.getElementById("where4");
+   let map4 = document.getElementById("map4");
    let close1 = document.getElementById("close1");
    let close2 = document.getElementById("close2");
    let close3 = document.getElementById("close3");
+   let close4 = document.getElementById("close4");
 
    where1.addEventListener("click", function(){
       console.log("where clicked");
@@ -26,9 +29,12 @@ document.addEventListener("DOMContentLoaded", function(){
    });
 
    where3.addEventListener("click", function(){
-      map2.style.display = "flex";
+      map3.style.display = "flex";
    });
 
+   where4.addEventListener("click", function(){
+      map4.style.display="flex";
+   });
    close1.addEventListener("click", function (){
       map1.style.display = "none";
    });
@@ -38,7 +44,11 @@ document.addEventListener("DOMContentLoaded", function(){
    });
 
    close3.addEventListener("click", function (){
-      map2.style.display ="none";
+      map3.style.display ="none";
+   });
+
+   close4.addEventListener("click", function(){
+      map4.style.display = "none";
    });
 });
 
