@@ -1,5 +1,5 @@
-
-import * as THREE from './node_modules/three/build/three.js';
+console.log("we made it to the first line of details.js");
+import * as THREE from 'three';
 import { GLTFLoader } from '../Project1Final/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
 import {OrbitControls} from '../Project1Final/node_modules/three/examples/jsm/controls/OrbitControls.js';
 
